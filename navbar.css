@@ -1,0 +1,70 @@
+.navbar {
+    background-color: darkslategray;
+    display:flex;
+    justify-content: space-around;
+    height: 50px;
+    width:100%;
+}
+.navbar-item {
+    font-style: oblique;
+    color:black;
+    padding-top: 15px;
+    width:100%;
+}
+.button{
+    width:100%;
+    border: 0;
+}
+.button:hover{
+    background-color: gray;
+    color:white;
+}
+.sign-in {
+    position: fixed;
+    height: 20px;
+    right: 11%;
+    top: 3.5%;
+    background-color: darkslategray;
+    color: white;
+    border: 1px solid darkgrey;
+}
+.center-content{
+    width: 80%;
+}
+#title-header{
+    height:50px;
+    background-color: darkgray;
+}
+#titlebar{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    height: 100px;
+    position: fixed;
+    width: 80%;
+    right:10%;
+}
+.navbar-link {
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid darkgray;
+    text-decoration:none;
+}
+.navbar-link:hover {
+    background-color: gray;
+}
+.full-box-border{
+    width:25%;
+    height:50px;
+}
+.footer {
+    text-align: center;
+}
+.signup{
+    width: 100%;
+    font-size: 12px;
+}
+#no-submit{
+    font-size: 13px;
+}
