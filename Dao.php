@@ -4,6 +4,7 @@
         private $db = "heroku_329aabc7db7cafd";
         private $user = "b56f33e5b75dc1";
         private $pass = "118aefa8";
+        private $hash = "1024940";
         private $conn;
 
         public function __construct(){
@@ -22,6 +23,7 @@
 
         public function addNewUser($username, $password){
             $stmt = "SELECT username FROM User WHERE username = ?";
+            $password = hash("sha256", $password);
             $preparedstmt = $this->conn->prepare($stmt);
             $preparedstmt->bind_param("s", $username);
             $preparedstmt->bind_result($outcome);
@@ -55,6 +57,7 @@
             return $outcome;
         }
         public function validateLogin($username, $password){
+            $password = hash("sha256", $password);
             $stmt = "SELECT username FROM User WHERE username = ? AND pass = ?";
             $preparedstmt = $this->conn->prepare($stmt);
             $preparedstmt->bind_param("ss", $username, $password);

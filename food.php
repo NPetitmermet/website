@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="/favicon.ico?v1" type="image/x-icon" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="content.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.js"></script>
     <?php session_start();?>
     <?php require_once("dao.php");
         $db = new dao();
@@ -59,10 +60,11 @@
                 ?>
             </div>
             <?php 
-                if(isset($_SESSION['error'])) echo '<div class="center-text error">ERROR: Please select a food item!</div>';
+                if(isset($_GET['error'])) echo '<div class="center-text error">ERROR: Please select a food item!</div>';
             ?>
         </form>
     </div>
     <?php include_once("footer.php"); ?>
+    <script src="foodSubmission.js"></script>
 </body>
 </html>

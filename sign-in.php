@@ -13,7 +13,7 @@
             $_SESSION['user'] = $_POST['username'];
             header("Location: /index.php?pagename=info");
         } else {
-            header("Location: /login.php?error=1&pagename=login");
+            header("Location: /login.php?error=1&pagename=login&username=".$_POST['username']);
         }
     }
     

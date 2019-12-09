@@ -68,3 +68,6 @@
 #no-submit{
     font-size: 13px;
 }
+.selected{
+    background-color: darkgray;
+}
